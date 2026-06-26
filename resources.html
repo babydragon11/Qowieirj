@@ -1,1 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tollgate Farms 4-H Club | Member Resources</title>
+    <style>
+        /* Modern, Clean Stylesheet Styling */
+        :root {
+            --4h-green: #008542; /* Official 4-H Green */
+            --dark-green: #005c2d;
+            --text-dark: #333333;
+            --bg-light: #f4f6f4;
+            --white: #ffffff;
+            --muted: #666666;
+            --accent-orange: #d97706;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--4h-green);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 20px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--4h-green);
+        }
+
+        /* Page Banner */
+        .page-banner {
+            background: linear-gradient(rgba(0, 133, 66, 0.8), rgba(0, 92, 45, 0.9)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1200') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .page-banner h1 {
+            font-size: 36px;
+            margin: 0 0 10px 0;
+        }
+
+        .page-banner p {
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        /* Main Content Layout Wrapper */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Section and Card Layouts */
+        .section-title {
+            color: var(--4h-green);
+            border-bottom: 3px solid var(--4h-green);
+            padding-bottom: 8px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .news-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.04);
+            border-left: 5px solid var(--4h-green);
+        }
+
+        .news-card.nature {
+            border-left-color: var(--accent-orange);
+        }
+
+        .meta-info {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+        }
+
+        .news-card h3 {
+            margin: 0 0 12px 0;
+            font-size: 20px;
+            color: var(--text-dark);
+        }
+
+        .news-card p {
+            margin: 0 0 15px 0;
+            color: #555;
+            font-size: 15px;
+        }
+
+        .read-more {
+            color: var(--4h-green);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Sidebar Downloads Box */
+        .sidebar-box {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.04);
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-box h3 {
+            margin-top: 0;
+            color: var(--text-dark);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .download-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .download-list li {
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .download-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .download-link {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .download-link:hover {
+            color: var(--4h-green);
+        }
+
+        .file-type {
+            font-size: 11px;
+            background: #e2e8f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #4a5568;
+            margin-right: 5px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #2b2b2b;
+            color: #fff;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🍀 Tollgate 4-H</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Our Projects</a>
+                <a href="gallery.html">Photo Gallery</a>
+                <a href="resources.html" class="active">Resources</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <h1>Educational Resources & News</h1>
+        <p>Stay informed with the latest updates from Tollgate Farms, local agricultural breakthroughs, and nature science guides.</p>
+    </div>
+
+    <div class="container">
+        
+        <main>
+            <h2 class="section-title">📰 News Around Tollgate & Agriculture</h2>
+
+            <div class="news-card">
+                <div class="meta-info">MSU Extension News • Local Farm Update</div>
+                <h3>Tollgate Farm Livestock Adaptation & Local Sourcing</h3>
+                <p>Farming thrives on navigating uncertainty. Following shifting economic environments and community-oriented shifts, MSU Tollgate Farm successfully engineered a structural transition across its heritage livestock flocks. Moving selectively toward high-efficiency Dorper-cross sheep breeds, Tollgate is emphasizing direct farm-to-table sustainability. This allows members to understand local farm economics while sourcing premium local meats directly through the Tollgate Farm store.</p>
+                <a href="https://www.canr.msu.edu/tollgate/" target="_blank" class="read-more">Visit Tollgate Hub &rarr;</a>
+            </div>
+
+            <div class="news-card">
+                <div class="meta-info">State Agricultural News • Research Spotlight</div>
+                <h3>Michigan Swine Industry Gains Edge with MSU Technology</h3>
+                <p>Recent adaptations in Michigan law require animal group housing structures that support free, open animal movement. To combat natural territorial habits ("boss hog" dynamics), Michigan State University is spearheading research deploying Artificial Intelligence and advanced machine learning to optimize tracking, feed nutrition, and biosecurity protocols. These modern research frameworks give 4-H students a front-row seat to the future of high-tech livestock management.</p>
+                <a href="https://msutoday.msu.edu/" target="_blank" class="read-more">Read Full Science Release &rarr;</a>
+            </div>
+
+            <h2 class="section-title">🌱 Deep Dives into Nature & Environment</h2>
+
+            <div class="news-card nature">
+                <div class="meta-info">Environmental Ecology • Great Lakes Region</div>
+                <h3>How Economic Shifts and Supply Chains Impact Local Agro-Ecosystems</h3>
+                <p>A recent regional report highlights how modern price spikes in inputs like urea and agricultural diesel are fundamentally altering how local farmers handle field cultivation. Many small family farms are opting to bypass heavy seasonal fertilization to preserve baseline capital. This shifts emphasis back to soil science, natural rotational grazing, and organic composting—concepts that 4-H members learn first-hand to manage farm health naturally.</p>
+                <a href="https://greatlakesecho.org/" target="_blank" class="read-more">Explore Great Lakes Echo &rarr;</a>
+            </div>
+
+            <div class="news-card nature">
+                <div class="meta-info">Nature Science Series • Educational Guide</div>
+                <h3>Understanding the Living Soil Web Beneath Tollgate's Pastures</h3>
+                <p>Soil is not dirt; it's a living ecosystem. A single teaspoon of healthy pasture soil contains more microorganisms than there are people on Earth. From mycorrhizal fungi establishing symbiotic networks with root systems to earthworms engineering nutrient cycles, protecting our topsoil via zero-till practices and diverse cover-cropping is the most vital defensive tool we have against local soil degradation.</p>
+                <span class="read-more" style="cursor:default; text-decoration:none; color:var(--muted);">Curated by Tollgate 4-H Leadership</span>
+            </div>
+        </main>
+
+        <aside>
+            <div class="sidebar-box">
+                <h3>📋 4-H Member Downloads</h3>
+                <p style="font-size:14px; color:var(--muted); margin-bottom: 20px;">Essential files and record books required for meetings and county fair check-ins.</p>
+                
+                <ul class="download-list">
+                    <li>
+                        <a href="#" class="download-link">
+                            <span class="file-type">PDF</span> 4-H Livestock Record Book
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="download-link">
+                            <span class="file-type">PDF</span> Youth Horticulture Project Sheet
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="download-link">
+                            <span class="file-type">DOCX</span> Tollgate 4-H Club Bylaws
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="download-link">
+                            <span class="file-type">PDF</span> Fair Entry Medical & Liability Waiver
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.canr.msu.edu/tollgate/volunteering/tollgate-garden-volunteer-newsletter" target="_blank" class="download-link" style="color: var(--4h-green);">
+                            📢 Official Tollgate Garden Newsletter
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tollgate Farms 4-H Club. All Rights Reserved.</p>
+        <p style="opacity: 0.6; font-size: 12px;">The 4-H Name and Emblem are protected under 18 U.S.C. 707.</p>
+    </footer>
+
+</body>
+</html>
