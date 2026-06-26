@@ -1,1 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tollgate Farms 4-H Club | Photo Gallery</title>
+    <style>
+        /* Modern, Clean Stylesheet Styling */
+        :root {
+            --4h-green: #008542; /* Official 4-H Green */
+            --dark-green: #005c2d;
+            --text-dark: #333333;
+            --bg-light: #f4f6f4;
+            --white: #ffffff;
+            --muted: #666666;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--4h-green);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 20px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--4h-green);
+        }
+
+        /* Page Banner using an official un-watermarked farm picture */
+        .page-banner {
+            background: linear-gradient(rgba(0, 133, 66, 0.75), rgba(0, 92, 45, 0.85)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1200') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .page-banner h1 {
+            font-size: 36px;
+            margin: 0 0 10px 0;
+        }
+
+        .page-banner p {
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        /* Layout Wrapper */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Photo Gallery Grid Style */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .gallery-item {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        /* Real Unsplash Images Optimized for 4-H Themes */
+        .gallery-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 4px solid var(--4h-green);
+        }
+
+        .gallery-info {
+            padding: 20px;
+        }
+
+        .gallery-info h3 {
+            margin: 0 0 8px 0;
+            font-size: 19px;
+            color: var(--text-dark);
+        }
+
+        .gallery-info p {
+            margin: 0;
+            font-size: 14.5px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #2b2b2b;
+            color: #fff;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🍀 Tollgate 4-H</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Our Projects</a>
+                <a href="gallery.html" class="active">Photo Gallery</a>
+                <a href="resources.html">Resources</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <h1>Club Photo Gallery</h1>
+        <p>Real-life highlights of our youth members learning, working together, and leading at Tollgate Farms.</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="gallery-grid">
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1527380992061-b126c88cbb41?auto=format&fit=crop&q=80&w=600" alt="Youth caring for a farm animal" class="gallery-img">
+                <div class="gallery-info">
+                    <h3>Livestock Care Workshop</h3>
+                    <p>4-H members learning animal health, grooming, and responsibilities with the Tollgate farm goats.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=600" alt="Kids working in a greenhouse" class="gallery-img">
+                <div class="gallery-info">
+                    <h3>Horticulture & Plant Science</h3>
+                    <p>Our junior gardeners starting organic heirloom vegetable seeds inside the Tollgate greenhouse.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=600" alt="Youth running a local stand" class="gallery-img">
+                <div class="gallery-info">
+                    <h3>4-H Youth Farm Stand</h3>
+                    <p>Members selling hand-made products like goat milk soaps and fruit leathers to support the barns.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511216173428-ee09d98f980c?auto=format&fit=crop&q=80&w=600" alt="Archery and outdoor sports" class="gallery-img">
+                <div class="gallery-info">
+                    <h3>Outdoor Skills & Archery</h3>
+                    <p>Focusing on safety, concentration, and personal goal setting during our outdoor education club weeks.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1569254994521-ddb5a7078b66?auto=format&fit=crop&q=80&w=600" alt="Embryology and baby chicks" class="gallery-img">
+                <div class="gallery-info">
+                    <h3>Incredible Embryology</h3>
+                    <p>Exploring egg development, incubation processes, and taking care of newly hatched chicks.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1532634922-8fe0b757fb13?auto=format&fit=crop&q=80&w=600" alt="Kids making crafts" class="gallery-img">
+                <div class="gallery-info">
+                    <h3>Creative Arts & Maker Spaces</h3>
+                    <p>Working on club-made crafts, calculating project costs, and preparing ribbon entries for the County Fair.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tollgate Farms 4-H Club. All Rights Reserved.</p>
+        <p style="opacity: 0.6; font-size: 12px;">The 4-H Name and Emblem are protected under 18 U.S.C. 707.</p>
+    </footer>
+
+</body>
+</html>
