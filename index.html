@@ -1,10 +1,275 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tollgate Farms 4-H Club | Home</title>
+    <style>
+        /* Modern, Clean Stylesheet Styling */
+        :root {
+            --4h-green: #008542; /* Official 4-H Green */
+            --dark-green: #005c2d;
+            --text-dark: #333333;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--4h-green);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 20px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--4h-green);
+        }
+
+        /* Hero Image Section */
+        .hero {
+            background: linear-gradient(rgba(0, 133, 66, 0.8), rgba(0, 92, 45, 0.9)), url('tollgate-farm-placeholder.jpg') center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin: 0 0 10px 0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Layout Layout Wrapper */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Section Styling */
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--4h-green);
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* Table Design for Calendar */
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .calendar-table th, .calendar-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .calendar-table th {
+            background-color: var(--bg-light);
+            color: var(--4h-green);
+            font-weight: 600;
+        }
+
+        /* Alert Callout */
+        .announcement-box {
+            background-color: #e6f3ec;
+            border-left: 4px solid var(--4h-green);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Details & Links */
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info strong {
+            color: var(--4h-green);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to my site!</h1>
-    <p>Coming soon...</p>
+
+    <!-- Header Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🍀 Tollgate 4-H</a>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="projects.html">Our Projects</a>
+                <a href="gallery.html">Photo Gallery</a>
+                <a href="resources.html">Resources</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Welcome Hero Banner -->
+    <div class="hero">
+        <h1>Welcome to Tollgate Farms 4-H Club</h1>
+        <p>Empowering youth through hands-on learning, leadership, and agriculture right here in our community.</p>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <div class="grid">
+            
+            <!-- Left Side Column: About and Calendar -->
+            <main>
+                <!-- Club Information -->
+                <section class="card">
+                    <h2>About Our Club</h2>
+                    <p>Based at the historic Tollgate Farms, our 4-H club focuses on building life skills, fostering leadership, and exploring agricultural interests. From livestock and horticulture to crafting and civic duty, our youth members "learn by doing."</p>
+                    
+                    <div class="announcement-box">
+                        <strong>📢 Fair Season is Around the Corner!</strong> Remember to keep your record books up to date. Our project sign-ups close before the next regular meeting.
+                    </div>
+
+                    <h3>Meeting Details</h3>
+                    <ul>
+                        <li><strong>Who:</strong> Open to youth ages 5–19</li>
+                        <li><strong>When:</strong> Every 2nd Tuesday of the month at 6:30 PM</li>
+                        <li><strong>Where:</strong> The Activity Center / Main Barn at Tollgate Farms</li>
+                    </ul>
+                </section>
+
+                <!-- Club Calendar Section -->
+                <section class="card">
+                    <h2>Upcoming Events & Calendar</h2>
+                    <p>Stay up to date with our monthly club meetings, volunteer projects, and fair deadlines.</p>
+                    
+                    <table class="calendar-table">
+                        <thead>
+                            <tr>
+                                <th>Event</th>
+                                <th>Date & Time</th>
+                                <th>Location / Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Monthly Club Meeting</strong></td>
+                                <td>July 14 @ 6:30 PM</td>
+                                <td>Tollgate Barn Classroom</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Farm Clean-Up Volunteer Day</strong></td>
+                                <td>July 18 @ 9:00 AM</td>
+                                <td>Front Gates - bring gloves!</td>
+                            </tr>
+                            <tr>
+                                <td><strong>County Fair Project Check-in</strong></td>
+                                <td>August 3 @ All Day</td>
+                                <td>County Fairgrounds</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p style="font-size: 14px; color: #666; font-style: italic; margin-top: 15px;">
+                        Note to parents: This HTML table can be manually edited inside index.html, or replaced later with an embedded dynamic Google Calendar iframe snippet.
+                    </p>
+                </section>
+            </main>
+
+            <!-- Right Side Column: Contact & Quick Info -->
+            <aside>
+                <section class="card contact-info">
+                    <h2>Contact Us</h2>
+                    <p>Have questions about joining or scheduling a visit to one of our meetings? Get in touch!</p>
+                    
+                    <p><strong>Club Leader:</strong> Jane Doe</p>
+                    <p><strong>Email:</strong> tollgate4h@example.com</p>
+                    <p><strong>Phone:</strong> (555) 019-4400</p>
+                    
+                    <hr style="border:0; border-top: 1px solid #eee; margin: 20px 0;">
+                    
+                    <h3>Quick Links</h3>
+                    <p>🔗 <a href="https://4-h.org/" target="_blank" style="color: var(--4h-green);">Official National 4-H Site</a></p>
+                    <p>🔗 <a href="#" style="color: var(--4h-green);">Tollgate Farms Extension Office</a></p>
+                </section>
+            </aside>
+
+        </div>
+    </div>
+
+    <!-- Page Footer -->
+    <footer>
+        <p>&copy; 2026 Tollgate Farms 4-H Club. All Rights Reserved.</p>
+        <p style="opacity: 0.6; font-size: 12px;">The 4-H Name and Emblem are protected under 18 U.S.C. 707.</p>
+    </footer>
+
 </body>
 </html>
